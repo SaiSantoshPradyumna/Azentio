@@ -1,0 +1,60 @@
+@import "../styles/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-content font-sans antialiased;
+  }
+
+  /* WCAG 2.2 AA: always-visible focus indicator */
+  :focus-visible {
+    outline: 3px solid rgb(var(--c-accent));
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: rgb(var(--c-accent) / 0.25);
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-md md:px-lg;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-chip bg-accent px-lg py-sm font-semibold text-accent-content transition-colors hover:bg-accent-strong;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-chip border border-line bg-surface-raised px-lg py-sm font-semibold text-content transition-colors hover:bg-surface-sunken;
+  }
+
+  .card {
+    @apply rounded-card border border-line bg-surface-raised p-lg;
+  }
+
+  .label {
+    @apply mb-xs block text-sm font-semibold text-content;
+  }
+
+  .field {
+    @apply w-full rounded-card border border-line bg-surface-raised px-sm py-sm text-content;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-xs rounded-chip border border-line bg-surface-sunken px-sm py-xs text-xs font-semibold text-content-muted;
+  }
+
+  .skip-link {
+    @apply absolute left-md top-md -translate-y-24 bg-accent px-md py-sm text-accent-content focus:translate-y-0;
+  }
+}

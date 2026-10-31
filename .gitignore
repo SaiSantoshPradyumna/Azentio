@@ -1,0 +1,38 @@
+# dependencies
+node_modules/
+
+# next
+.next/
+out/
+
+# local tooling / bundled node
+.tools/
+
+# runtime data (recreated by npm run seed)
+data/
+*.db
+*.db-*
+
+# env & secrets
+.env
+.env.local
+.env.*.local
+
+# logs & caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+.turbo/
+.cache/
+
+# generated
+next-env.d.ts
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.zip

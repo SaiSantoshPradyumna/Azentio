@@ -1,0 +1,71 @@
+/*
+ * Azentio design tokens.
+ * Replace values with Azentio brand tokens captured from azentio.com.
+ * Captured from reference prototype https://azentio-ai-ipad.ssaha999.chatgpt.site/
+ *   --bg #171b3a · --green #69D393 · --ink #102031 · --light #f5f7f9 · --muted #607080
+ * Channels are raw RGB triplets so Tailwind can apply alpha.
+ * Light is the default; dark follows prefers-color-scheme.
+ */
+
+:root {
+  /* Replace values with Azentio brand tokens captured from azentio.com. */
+  --c-surface: 245 247 249; /* #f5f7f9 */
+  --c-surface-raised: 255 255 255;
+  --c-surface-sunken: 232 236 241;
+  --c-content: 16 32 49; /* #102031 */
+  --c-content-muted: 96 112 128; /* #607080 */
+  --c-line: 206 214 222;
+  --c-accent: 23 27 58; /* #171b3a deep navy */
+  --c-accent-strong: 12 16 40;
+  --c-accent-content: 255 255 255;
+  --c-state: 105 211 147; /* #69D393 mint */
+  --c-warning: 180 120 20;
+  --c-success: 34 140 80;
+
+  --font-sans: "Segoe UI", "Noto Sans Arabic", "Tahoma", system-ui, sans-serif;
+  --font-display: "Segoe UI Semibold", "Noto Sans Arabic", var(--font-sans);
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+
+  --radius-card: 0.5rem;
+  --radius-chip: 9999px;
+
+  --container-max: 72rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-surface: 23 27 58;
+    --c-surface-raised: 30 35 72;
+    --c-surface-sunken: 16 20 44;
+    --c-content: 245 247 249;
+    --c-content-muted: 160 174 188;
+    --c-line: 55 64 96;
+    --c-accent: 105 211 147;
+    --c-accent-strong: 140 230 175;
+    --c-accent-content: 16 32 49;
+    --c-state: 105 211 147;
+    --c-warning: 251 191 36;
+    --c-success: 74 222 128;
+  }
+}
+
+html[dir="rtl"] body {
+  font-family: "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
